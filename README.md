@@ -12,7 +12,7 @@ Each dataset is a separate [release](../../releases): the files are attached the
 
 ## Guides
 
-- [Blue and gold from duo-band data: my DWARF Mini workflow, step by step](guides/duo-band-hubble-palette.md) ([українською](guides/duo-band-hubble-palette_uk.md)): Siril stacking, Ha/OIII split, Hubble-style colour mapping with [hubble_map.py](scripts/hubble_map.py).
+- [Blue and gold from duo-band data: my DWARF Mini workflow, step by step](guides/duo-band-hubble-palette.md) ([українською](guides/duo-band-hubble-palette_uk.md)): Siril stacking, Ha/OIII split, Hubble-inspired false-colour mapping, with a disclosure of the neural-network tools used with [hubble_map.py](scripts/hubble_map.py).
 
 ## Terms
 

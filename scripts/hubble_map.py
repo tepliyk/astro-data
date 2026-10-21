@@ -1,7 +1,10 @@
-"""Hubble-style (gold/blue) palette from duo-band Ha + OIII data.
+"""Hubble-inspired (gold/blue) palette from duo-band Ha + OIII data.
 
+A purely mathematical remapping of the two existing channels, no generative AI.
 Brightness comes from both channels, the hue only from the OIII share in each pixel,
 so the core does not blow out to white the way a linear channel mix (or classic Foraxx) can.
+This is not SHO: there is no SII channel, and the colours show a chosen mapping of the
+independently stretched signals, not quantitative line ratios or gas abundances.
 
 Inputs are LINEAR, STARLESS mono FITS for Ha and OIII (same size, already background-extracted
 and denoised), plus an optional linear RGB stars-only FITS from your star removal tool.
@@ -102,7 +105,11 @@ rgb = rgb * (L2 / np.maximum(L, 1e-6))[..., None]
 g = rgb.mean(-1, keepdims=True)
 rgb = np.clip(g + a.sat * (rgb - g), 0, 1)
 
-# 6. neutral pedestal: background becomes dark grey instead of clipped black
+# share of pixels sitting at the black point BEFORE the pedestal: this is the real shadow loss
+floor_pct = float((rgb.max(-1) < 1 / 255).mean() * 100)
+
+# 6. neutral pedestal: background becomes dark grey instead of pure black.
+#    It only lifts the floor, it does NOT recover shadow detail lost at the black point.
 rgb = a.ped + rgb * (1 - a.ped)
 
 # 7. stars back with muted colour, screen blend
@@ -119,5 +126,5 @@ rgb = np.clip(rgb, 0, 1)
 tifffile.imwrite(a.out + '_16bit.tiff', (rgb * 65535).astype(np.uint16), photometric='rgb')
 Image.fromarray((rgb * 255).astype(np.uint8)).save(a.out + '.jpg', quality=95)
 json.dump(vars(a), open(a.out + '_params.json', 'w'), indent=1)
-clipped = float((rgb.max(-1) < 2 / 255).mean() * 100)
-print(f'saved {a.out}_16bit.tiff and {a.out}.jpg, {rgb.shape[1]}x{rgb.shape[0]}, clipped blacks {clipped:.2f}%')
+print(f'saved {a.out}_16bit.tiff and {a.out}.jpg, {rgb.shape[1]}x{rgb.shape[0]}')
+print(f'pixels at the black point before pedestal: {floor_pct:.2f}% (lower --lo if this is high)')
