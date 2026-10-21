@@ -50,7 +50,7 @@ stack r_pp_light rej w 3 3 -norm=addscale -output_norm -rgb_equal -filter-includ
 
 Результат: 731 кадр у панелі 1 і 684 у панелі 2.
 
-![Лінійний стек з автророзтягом](img/02_linear_autostretch_unlinked.jpg)
+![Лінійний стек з авторозтягом](img/02_linear_autostretch_unlinked.jpg)
 
 *Стек зі швидким авторозтягом. Зелені й фіолетові градієнти це засвітка, вона йде на кроці 5.*
 
