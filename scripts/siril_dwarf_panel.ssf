@@ -1,0 +1,16 @@
+requires 1.4.0
+# Siril script: calibrate, register and stack one panel of DWARF Mini raw subs.
+# Folder layout (relative to Siril's working directory):
+#   lights/        raw FITS subs of ONE target or ONE mosaic panel, from all nights
+#   master_dark.fit, master_flat.fit, master_bias.fit   (see the guide, step 2)
+# Run: siril-cli -s siril_dwarf_panel.ssf -d <working directory>
+setext fit
+set32bits
+cd lights
+convert light -out=../process
+cd ../process
+calibrate light -dark=../master_dark -flat=../master_flat -bias=../master_bias -cfa -equalize_cfa -debayer
+register pp_light -2pass
+seqapplyreg pp_light -filter-wfwhm=90% -filter-round=90% -filter-bkg=90%
+stack r_pp_light rej w 3 3 -norm=addscale -output_norm -rgb_equal -filter-included -weight=wfwhm -out=../stack
+close

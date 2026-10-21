@@ -10,6 +10,10 @@ Each dataset is a separate [release](../../releases): the files are attached the
 |---|---|---|
 | NGC 2244 Rosette Nebula | duo-band, 2-panel mosaic, 1415 x 60 s, 10 nights, 23.6 h, linear stack | [data-ngc2244-rosette](../../releases/tag/data-ngc2244-rosette) |
 
+## Guides
+
+- [Blue and gold from duo-band data: my DWARF Mini workflow, step by step](guides/duo-band-hubble-palette.md) ([українською](guides/duo-band-hubble-palette_uk.md)): Siril stacking, Ha/OIII split, Hubble-style colour mapping with [hubble_map.py](scripts/hubble_map.py).
+
 ## Terms
 
 Free to process for personal use. If you post your version, please credit
