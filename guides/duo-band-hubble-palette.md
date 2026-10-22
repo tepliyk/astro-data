@@ -4,7 +4,7 @@ How I made the Hubble-inspired Rosette ([AstroBin](https://app.astrobin.com/i/u0
 
 ![Final image](img/07_final.jpg)
 
-**Data:** DWARF Mini, Alt-Az, built-in duo-band filter, gain 80, 2-panel mosaic, 60 s subs over 10 nights. Panel 1: 731 subs (12.2 h), panel 2: 684 subs (11.4 h), 23.6 h in total. Each part of the image has roughly half of that, only the overlap between the panels has both.
+**Data:** DWARF Mini in EQ mode, built-in duo-band filter, gain 80, 2-panel mosaic, 60 s subs over 10 nights. Panel 1: 731 subs (12.2 h), panel 2: 684 subs (11.4 h), 23.6 h in total. Each part of the image has roughly half of that, only the overlap between the panels has both.
 
 ## Disclosure: what is neural-network processing and what is not
 
