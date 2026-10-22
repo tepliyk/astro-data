@@ -1,5 +1,7 @@
 # Blue and gold from duo-band data: my DWARF Mini workflow, step by step
 
+> Read it on the website, with all images and a table of contents: [tepliyk.github.io/en/processing/duo-band](https://tepliyk.github.io/en/processing/duo-band/)
+
 How I made the Hubble-inspired Rosette ([AstroBin](https://app.astrobin.com/i/u0bd2k), revision D) from a 30 mm smart telescope on a city balcony. Every number below is the setting actually used on this image. The linear stack is [here](https://github.com/tepliyk/astro-data/releases/tag/data-ngc2244-rosette) if you want to follow along with the same data.
 
 ![Final image](img/07_final.jpg)

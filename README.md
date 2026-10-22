@@ -12,7 +12,7 @@ Each dataset is a separate [release](../../releases): the files are attached the
 
 ## Guides
 
-- [Blue and gold from duo-band data: my DWARF Mini workflow, step by step](guides/duo-band-hubble-palette.md) ([українською](guides/duo-band-hubble-palette_uk.md)): Siril stacking, Ha/OIII split, Hubble-inspired false-colour mapping, with a disclosure of the neural-network tools used with [hubble_map.py](scripts/hubble_map.py).
+- [Blue and gold from duo-band data: my DWARF Mini workflow, step by step](guides/duo-band-hubble-palette.md) ([українською](guides/duo-band-hubble-palette_uk.md)): Siril stacking, Ha/OIII split, Hubble-inspired false-colour mapping, with a disclosure of the neural-network tools used with [hubble_map.py](scripts/hubble_map.py). Also on the website: [English](https://tepliyk.github.io/en/processing/duo-band/), [Ukrainian](https://tepliyk.github.io/processing/duo-band/).
 
 ## Terms
 
@@ -22,4 +22,5 @@ Free to process for personal use. If you post your version, please credit
 ## More
 
 - Night-by-night log of every target: https://tepliyk.github.io/en/
+- Processing guides: https://tepliyk.github.io/en/processing/
 - Telegram channel: https://t.me/nebo_blyzhche

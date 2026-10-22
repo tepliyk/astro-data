@@ -1,5 +1,7 @@
 # Синє й золоте з дуобенд-даних: моя обробка DWARF Mini покроково
 
+> Читати на сайті, з усіма зображеннями й змістом: [tepliyk.github.io/processing/duo-band](https://tepliyk.github.io/processing/duo-band/)
+
 Як я зробив Розетку в палітрі, натхненній «Хабблом» ([AstroBin](https://app.astrobin.com/i/u0bd2k), ревізія D), з 30-мм смарт-телескопа на міському балконі. Усі числа нижче це налаштування, реально використані на цьому знімку. Лінійний стек [тут](https://github.com/tepliyk/astro-data/releases/tag/data-ngc2244-rosette), можна пройти всі кроки на тих самих даних.
 
 ![Фінал](img/07_final.jpg)
